@@ -22,11 +22,13 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
-        var configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-            .AddEnvironmentVariables().Build();
+        //var configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory())
+        //    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+        //    .AddEnvironmentVariables().Build();
 
-        var connectionString = configuration.GetConnectionString("DefaultConnection");
+        //var connectionString = configuration.GetConnectionString("DefaultConnection");
+        var connectionString = builder.Configuration["ConnectionStrings:DefaultConnection"];
+
 
         builder.Services.AddDbContext<AppDbContext>(
         options => options.UseSqlServer(connectionString));
