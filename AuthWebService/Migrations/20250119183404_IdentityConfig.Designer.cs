@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AuthWebService.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250115054147_Identity Setup")]
-    partial class IdentitySetup
+    [Migration("20250119183404_IdentityConfig")]
+    partial class IdentityConfig
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
