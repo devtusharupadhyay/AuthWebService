@@ -28,8 +28,8 @@ public class Program
             .AddEnvironmentVariables().Build();
 
         var connectionString = configuration.GetConnectionString("DefaultConnection");
-        
-        
+
+
         //var connectionString = builder.Configuration["ConnectionStrings:DefaultConnection"];
         //var connectionString = builder.Configuration["ConnectionStrings:AzureConnection"];
 
